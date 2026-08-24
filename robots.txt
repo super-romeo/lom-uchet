@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /pay.html
+Disallow: /thanks.html
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&_openstat
+
+Sitemap: https://super-romeo.github.io/lom-uchet/sitemap.xml
