@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ЛомУчёт — заявка принята</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<script src="smoke.js"></script>
+</head>
+<body>
+
+<header><div class="wrap"><div class="logo"><a href="index.html">ЛомУчёт</a></div></div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Заявка принята</h1>
+    <p class="sub">Ответим в течение рабочего дня на указанный вами контакт. В ответном письме уточним, какой лом вы перерабатываете и на какой аффинаж возите, — от этого зависит, что заводить в первую очередь. Счёт и договор пришлём тем же письмом, если решите подключаться.</p>
+    <a class="cta" href="index.html">Вернуться на сайт</a>
+    <p class="cta-note">Письмо не пришло в течение рабочего дня? Напишите напрямую — адрес в подвале страницы</p>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  Оператор: ИП Гудев Роман, ИНН 615007167949. Почта: <a href="mailto:rgudev@bk.ru">rgudev@bk.ru</a>.
+  <a href="privacy.html">Политика обработки персональных данных</a>.
+</div></footer>
+
+<script>
+/* Единственный ловец цели lead_submit. Событий из чужого iframe мы не
+   ловим — принимаем посетителя на своей странице и шлём цель здесь.
+   Если страница открыта внутри iframe формы, сначала выходим на верхний
+   уровень, чтобы посетитель увидел её целиком, и только потом шлём цель. */
+(function () {
+  try {
+    if (window.top !== window.self) { window.top.location.replace(location.href); return; }
+  } catch (e) {}
+  try { track("lead_submit"); } catch (e) {}
+})();
+</script>
+</body>
+</html>
